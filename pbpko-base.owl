@@ -78,6 +78,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000232 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000232"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/type -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/type"/>
@@ -166,45 +172,94 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PBPKO_10001 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10001"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10001">
+        <rdfs:label xml:lang="en">involves process</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10002 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10002"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10002">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has compartment</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10004 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10004"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10004">
+        <rdfs:label xml:lang="en">has transporter</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10006 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10006"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10006">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has biochemical parameter</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10007 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10007"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10007">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has physicochemical parameter</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10008 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10008"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10008">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has physiological parameter</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.obolibrary.org/obo/PBPKO_10009 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10009"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10009">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has route of exposure</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_10010 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10010">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has parameter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_10011 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/PBPKO_10011">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <rdfs:label xml:lang="en">has output parameter</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -292,6 +347,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -1217,12 +1278,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1488,12 +1543,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1860,12 +1909,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2436,6 +2479,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that contains an explicit representation of the organs most relevant to the ADME of the compound.</pbpko:IAO_0000115>
@@ -2453,6 +2508,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -3378,12 +3439,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3649,12 +3704,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4021,12 +4070,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4597,6 +4640,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that assumes tissue concentration reaches equilibrium rapidly and uptake/elimination is limited by blood flow rate.</pbpko:IAO_0000115>
@@ -8023,6 +8078,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -8948,12 +9009,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9219,12 +9274,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9591,12 +9640,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -10169,6 +10212,18 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that considers the permeability across membranes as a limiting factor for compound distribution.</pbpko:IAO_0000115>
         <pbpko:IAO_0000117>0000-0001-8345-1349</pbpko:IAO_0000117>
         <pbpko:IAO_0000117>0000-0002-9795-5967</pbpko:IAO_0000117>
@@ -10308,6 +10363,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00316">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -11235,12 +11296,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11506,12 +11561,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -11878,12 +11927,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -12396,6 +12439,18 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model approach used to characterize interindividual variability within a population.</pbpko:IAO_0000115>
         <pbpko:IAO_0000117>0000-0001-8345-1349</pbpko:IAO_0000117>
         <pbpko:IAO_0000117>0000-0002-9795-5967</pbpko:IAO_0000117>
@@ -12408,6 +12463,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00317">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -13335,12 +13396,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13606,12 +13661,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -13978,12 +14027,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -14554,6 +14597,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model approach primarily based on fitting observed clinical data, often empirical.</pbpko:IAO_0000115>
@@ -14570,6 +14625,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -15495,12 +15556,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -15766,12 +15821,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -16138,12 +16187,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -16714,6 +16757,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model approach built mechanistically using in vitro and physiological data.</pbpko:IAO_0000115>
@@ -17072,6 +17127,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -17931,12 +17992,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -18202,12 +18257,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -18579,12 +18628,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00312"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -18862,6 +18905,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations in the brain.</pbpko:IAO_0000115>
@@ -19174,6 +19229,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00371">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -20029,12 +20090,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -20276,12 +20331,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -20629,12 +20678,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00312"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -20906,6 +20949,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations during pregnancy.</pbpko:IAO_0000115>
@@ -21207,6 +21262,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/GO_0007588"/>
             </owl:Restriction>
@@ -22018,12 +22079,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -22265,12 +22320,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -22613,12 +22662,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -22807,6 +22850,18 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations within the kidney compartments.</pbpko:IAO_0000115>
         <pbpko:IAO_0000117>0000-0001-8345-1349</pbpko:IAO_0000117>
         <pbpko:IAO_0000117>0000-0002-9795-5967</pbpko:IAO_0000117>
@@ -22907,6 +22962,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00403">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -23720,12 +23781,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -23967,12 +24022,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -24315,12 +24364,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00122"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -24515,6 +24558,18 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations within the lung compartments.</pbpko:IAO_0000115>
         <pbpko:IAO_0000117>0000-0001-8345-1349</pbpko:IAO_0000117>
         <pbpko:IAO_0000117>0000-0002-9795-5967</pbpko:IAO_0000117>
@@ -24575,6 +24630,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00408">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -25383,12 +25444,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00010"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -25659,12 +25714,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -26036,12 +26085,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00312"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -26343,6 +26386,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations within the gut compartments.</pbpko:IAO_0000115>
@@ -26692,6 +26747,12 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_00435">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10001"/>
@@ -27535,12 +27596,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -27782,12 +27837,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00057"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -28135,12 +28184,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00296"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10008"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00312"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -28352,6 +28395,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10009"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00251"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10010"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/PBPKO_10011"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <pbpko:IAO_0000115>A physiologically based pharmacokinetic model specifically built to predict compound concentrations during lactation, including transfer into milk.</pbpko:IAO_0000115>
@@ -31024,6 +31079,16 @@ scvart</oboInOwl:hasSynonymType>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PBPKO_02014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_02014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00446"/>
+        <pbpko:IAO_0000115>A compartment that represents the pool of a chemical bound to metallothionein.</pbpko:IAO_0000115>
+        <rdfs:label>metallothionein compartment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PBPKO_03001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03001">
@@ -31729,6 +31794,420 @@ scvart</oboInOwl:hasSynonymType>
         <pbpko:IAO_0000115>An unbound fraction parameter specifically for the kidney proximal tubule.</pbpko:IAO_0000115>
         <pbpko:IAO_0000117>0009-0001-7071-8646</pbpko:IAO_0000117>
         <rdfs:label>fraction unbound kidney proximal tubule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03079 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing release of the chemical into the colon.</pbpko:IAO_0000115>
+        <rdfs:label>kinetic emptying rate to the colon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03080 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03080">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from blood into the hair compartment.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate to hair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03081 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant representing total elimination of the chemical from the body, computed as the sum of all elimination transfers.</pbpko:IAO_0000115>
+        <rdfs:label>whole body elimination rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03082 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03082">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant representing total elimination of the chemical from the body, computed as the sum of all elimination transfers other than transfer to hair.</pbpko:IAO_0000115>
+        <rdfs:label>whole body elimination rate excluding hair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the constant ratio of whole-body chemical burden to the concentration of the chemical in blood.</pbpko:IAO_0000115>
+        <rdfs:label>whole body burden blood constant ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03084 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03084">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the proportion of cadmium entering the gastrointestinal tract that is retained in the gastrointestinal epithelium.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of GI tract cadmium retained in epithelium</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03085 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03085">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the proportion of the chemical in the uptake pool that is transferred to blood pool B4.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of uptake pool transferred to blood pool B4</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant governing transfer of cadmium from blood pool B1 to blood pool B2.</pbpko:IAO_0000115>
+        <rdfs:label>rate of transfer of Cd in B1 to blood B2</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant governing transfer of the chemical from blood pool B2 to blood pool B3.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate from blood pool B2 to blood pool B3</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant governing transfer of cadmium from the gastrointestinal tract to the uptake pool.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate of cadmium in the GI tract to uptake pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03089 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03089">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from blood to other tissues.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate from blood to other tissues</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from other tissues to blood.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate from other tissues to blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03091 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03091">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from blood to the kidney.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate from blood to kidney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03092 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03092">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the rate constant governing diffusive exchange of the chemical between red blood cells and plasma.</pbpko:IAO_0000115>
+        <rdfs:label>red blood cell plasma diffusion rate constant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03093 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03093">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the lung to the total systemic circulation.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate constant from lung to total systemic circulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03094 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03094">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the lung to the gastrointestinal tract.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate constant from lung to GI</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03095">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the proportion of the chemical absorbed in the gut lumen that is transferred to intestine tissue.</pbpko:IAO_0000115>
+        <rdfs:label>absorbed fraction in gut lumen transfered to intestine tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03096 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03096">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the intestine to total systemic uptake.</pbpko:IAO_0000115>
+        <rdfs:label>transfer rate constant from intestine to total systemic uptake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03097 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03097">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the proportion of total systemic chemical uptake that becomes bound to metallothionein.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of total systemic chemical uptake to the metallothionein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03098 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03098">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the maximum rate of chemical flux into the metallothionein pool.</pbpko:IAO_0000115>
+        <rdfs:label>maximum chemical flux into the metallothionein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03099 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03099">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing turnover of metallothionein-bound chemical.</pbpko:IAO_0000115>
+        <rdfs:label>turnover rate constant for MT bound chemical</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing a kinetic process in the model.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03101 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03101">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing a turnover process in the model.</pbpko:IAO_0000115>
+        <rdfs:label>first order turnover kinetic constant rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03102 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03102">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing a transfer process between two compartments of the model.</pbpko:IAO_0000115>
+        <rdfs:label>first order transfer kinetic constant rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03103 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03103">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from plasma to the rest of the body.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from plasma to rest of body</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03104">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the rest of the body to plasma.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from rest of body to plasma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03105 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03105">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from plasma to feces.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from plasma to feces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from plasma to the liver.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from plasma to liver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from plasma to red blood cells.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from plasma to red blood cells</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03108 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03108">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the liver to plasma.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from liver to plasma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the liver to the metallothionein pool.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from liver to metallothionein pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03110 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03110">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the liver to feces.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from liver to feces</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03111 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03111">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from plasma to the metallothionein pool.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from plasma to metallothionein pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from red blood cells to the metallothionein pool.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from red blood cells to metallothionein pool</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the first-order rate constant governing transfer of the chemical from the kidney to plasma.</pbpko:IAO_0000115>
+        <rdfs:label>first order kinetic constant rate from kidney to plasma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the diffusive flux of the chemical between the culture medium and the cells.</pbpko:IAO_0000115>
+        <rdfs:label>diffusive medium cell exchange flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the diffusive flux of the chemical between the culture medium and the polystyrene of the culture vessel.</pbpko:IAO_0000115>
+        <rdfs:label>diffusive medium polystyrene exchange flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the diffusive flux of the chemical between the culture medium and the overlying air.</pbpko:IAO_0000115>
+        <rdfs:label>diffusive medium air exchange flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00126"/>
+        <pbpko:IAO_0000115>A physicochemical parameter that is the distance over which the chemical diffuses within the polystyrene of the culture vessel.</pbpko:IAO_0000115>
+        <rdfs:label>diffusion distance in the polystyrene</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the temperature of the in vitro system, expressed in degrees Celsius.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>temperature (°C)</pbpko:IAO_0000118>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>temperature degC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_03119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_03119">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter representing the amount of compound transferred from one compartment to another per unit time.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>rate of transfer</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>rate of transfer between compartments</pbpko:IAO_0000118>
+        <rdfs:label>transfer rate</rdfs:label>
     </owl:Class>
     
 
@@ -32851,6 +33330,288 @@ scvart</oboInOwl:hasSynonymType>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04112 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04112">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00332"/>
+        <pbpko:IAO_0000115>A lifestage that extends from birth to one month of age.</pbpko:IAO_0000115>
+        <rdfs:label>neonate lifestage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the proportion of total body weight accounted for by the sum of the compartments represented in a model.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>fraction of BW modelled</pbpko:IAO_0000118>
+        <rdfs:label>fraction of bodyweight modelled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04114 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04114">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00012"/>
+        <pbpko:IAO_0000115>A blood flow rate to compartment that is the rate at which blood reaches the liver through the hepatic artery.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>hepatic arterial blood flow</pbpko:IAO_0000118>
+        <rdfs:label>hepatic arterial blood flow rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04115 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04115">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the longitudinal extent of the jejunum.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>jejunum length</pbpko:IAO_0000118>
+        <rdfs:label>length of jejunum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04116 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04116">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the longitudinal extent of the ileum.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>ileum length</pbpko:IAO_0000118>
+        <rdfs:label>length of ileum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04117 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04117">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the longitudinal extent of the large intestine.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>large intestine length</pbpko:IAO_0000118>
+        <rdfs:label>length of large intestine</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04118 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04118">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00636"/>
+        <pbpko:IAO_0000115>A bodily fluid flow rate parameter that is the first-order constant governing the flow of filtered fluid through the kidney compartment.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>glomerular filtration constant</pbpko:IAO_0000118>
+        <rdfs:label>glomerular filtration rate constant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04119 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04119">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the volume of urine produced per unit time.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>urine production</pbpko:IAO_0000118>
+        <rdfs:label>urine production rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04120">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
+        <pbpko:IAO_0000115>A cardiac output rate that is expressed per unit body weight raised to the power 0.75.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>allometrically scaled cardiac output</pbpko:IAO_0000118>
+        <rdfs:label>allometrically scaled cardiac output rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04121">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the proportion of total body volume accounted for by the sum of the compartments represented in a model.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of total body volume modelled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04122">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00066"/>
+        <pbpko:IAO_0000115>A volume of compartment that is the sum of the volumes of all compartments represented in a model.</pbpko:IAO_0000115>
+        <rdfs:label>total body volume modelled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04123">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the proportion of total body mass accounted for by the sum of the compartments represented in a model.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of total body mass modelled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the sum of the masses of all compartments represented in a model.</pbpko:IAO_0000115>
+        <rdfs:label>total body mass modelled</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00521"/>
+        <pbpko:IAO_0000115>An age in PBPK model that serves as the basis for scaling nominal body weight to reference body weight.</pbpko:IAO_0000115>
+        <rdfs:label>reference age</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04126 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04126">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the sex of the modelled individual, used to select sex-specific parameter values.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>sex discrimination</pbpko:IAO_0000118>
+        <rdfs:label>sex</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
+        <pbpko:IAO_0000115>A bodyweight that is the body weight of the modelled individual at the reference age.</pbpko:IAO_0000115>
+        <rdfs:label>reference bodyweight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04128 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04128">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the mass per unit volume of a tissue or organ.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>density of tissue/organs</pbpko:IAO_0000118>
+        <rdfs:label>density of tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04129 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04129">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
+        <pbpko:IAO_0000115>A bodyweight that is the nominal body weight assigned to the modelled individual for a given sex.</pbpko:IAO_0000115>
+        <rdfs:label>sex specific nominal bodyweight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04130 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04130">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the baseline urinary creatinine concentration used to normalise urinary analyte concentrations.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>reference creatinine</pbpko:IAO_0000118>
+        <rdfs:label>reference urinary creatinine concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04131 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04131">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless factor applied to a reference body weight to obtain an individual body weight.</pbpko:IAO_0000115>
+        <rdfs:label>bodyweight multiplier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04132 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04132">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter representing the ratio of albumin concentration in plasma to that in the kidney proximal tubule lumen.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>albumin ratio proximal tubule lumen</pbpko:IAO_0000118>
+        <rdfs:label>albumin ratio kidney proximal tubule lumen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04133 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter representing the ratio of albumin concentration in plasma to that in the extracellular space of the liver.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>albumin ratio liver extracellular space</pbpko:IAO_0000118>
+        <rdfs:label>albumin ratio liver extracellular</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04134 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04134">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter representing the concentration of albumin in serum.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>albumin concentration in serum</pbpko:IAO_0000118>
+        <rdfs:label>serum albumin concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04135 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04135">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00636"/>
+        <pbpko:IAO_0000115>A bodily fluid flow rate parameter representing the flow rate of tubular fluid through the proximal tubule of the kidney compartment.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>filtrate fluid flow rate</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>proximal tubule fluid flow rate</pbpko:IAO_0000118>
+        <rdfs:label>tubular fluid flow rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04136 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04136">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00636"/>
+        <pbpko:IAO_0000115>A bodily fluid flow rate parameter representing the rate at which urine is produced and excreted from the kidney compartment.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>urine excretion rate</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>urine secretion rate</pbpko:IAO_0000118>
+        <rdfs:label>urine flow rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_04137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_04137">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00636"/>
+        <pbpko:IAO_0000115>A bodily fluid flow rate parameter representing the rate at which plasma is lost from the body through menstruation.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>menses flow rate</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>menstrual fluid clearance</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>menstrual fluid flow rate</pbpko:IAO_0000118>
+        <pbpko:IAO_0000118>menstrual plasma clearance rate</pbpko:IAO_0000118>
+        <rdfs:label>menstrual plasma flow rate</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PBPKO_05001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_05001">
@@ -33651,11 +34412,602 @@ scvart</oboInOwl:hasSynonymType>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06069 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06069">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00252"/>
+        <pbpko:IAO_0000115>An output parameter that is the total amount of the chemical taken up by the body per day.</pbpko:IAO_0000115>
+        <rdfs:label>amount of daily uptake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00616"/>
+        <pbpko:IAO_0000115>A concentration of compound in compartment that is the concentration measured in the colon compartment.</pbpko:IAO_0000115>
+        <rdfs:label>concentration in colon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00615"/>
+        <pbpko:IAO_0000115>An amount of compound in compartment that is the amount measured in the hair compartment.</pbpko:IAO_0000115>
+        <rdfs:label>amount in hair</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06072 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00615"/>
+        <pbpko:IAO_0000115>An amount of compound in compartment that is the amount measured in the red blood cell compartment.</pbpko:IAO_0000115>
+        <rdfs:label>amount in red blood cells</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00615"/>
+        <pbpko:IAO_0000115>An amount of compound in compartment that is the amount measured in the metallothionein compartment.</pbpko:IAO_0000115>
+        <rdfs:label>amount in metallothionein</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06074 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06074">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00252"/>
+        <pbpko:IAO_0000115>An output parameter that is the total amount of the chemical excreted from the body by all routes.</pbpko:IAO_0000115>
+        <rdfs:label>total amount excreted</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06075 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06075">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00252"/>
+        <pbpko:IAO_0000115>An output parameter that is the total amount of the chemical present in the body.</pbpko:IAO_0000115>
+        <rdfs:label>total body burden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06076 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00615"/>
+        <pbpko:IAO_0000115>An amount of compound in compartment that is the amount measured in the cord blood compartment at the start of the simulation.</pbpko:IAO_0000115>
+        <rdfs:label>amount in cord blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_06077 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_06077">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00616"/>
+        <pbpko:IAO_0000115>A concentration of compound in compartment that is the concentration measured in the cord blood compartment at the start of the simulation.</pbpko:IAO_0000115>
+        <rdfs:label>concentration in cord blood</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PBPKO_07001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_07001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
         <rdfs:label>invitro pbpk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_07002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_07002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that represents a generic fish rather than a single named fish species.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>fish pbpk (generic)</pbpko:IAO_0000118>
+        <rdfs:label>generic fish pbpk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_07003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_07003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that represents a generic crustacean rather than a single named crustacean species.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>crustacean pbpk (generic)</pbpko:IAO_0000118>
+        <rdfs:label>generic crustacean pbpk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_07004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_07004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that represents a generic alga rather than a single named algal species.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>algae pbpk (generic)</pbpko:IAO_0000118>
+        <rdfs:label>generic algae pbpk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_07005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_07005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00003"/>
+        <pbpko:IAO_0000115>A physiologically based pharmacokinetic model that represents a plant of the genus Lemna.</pbpko:IAO_0000115>
+        <rdfs:label>lemna pbpk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of blood leaving the poorly perfused tissue compartment that returns directly to mixed venous blood rather than being routed through the kidney.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000118>fraction of PPT blood flow going to venous blood</pbpko:IAO_0000118>
+        <rdfs:label>fraction of poorly perfused tissue blood flow going to venous blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of blood leaving the skin compartment that returns directly to mixed venous blood rather than being routed through the kidney.</pbpko:IAO_0000115>
+        <rdfs:label>fraction of skin blood flow going to venous blood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
+        <pbpko:IAO_0000115>A cardiac output rate that is the cardiac output per unit body weight specified at a reference body weight and reference temperature.</pbpko:IAO_0000115>
+        <rdfs:label>reference mass specific cardiac output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08004 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08004">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
+        <pbpko:IAO_0000115>A bodyweight that is the body weight at which the reference mass-specific cardiac output is specified.</pbpko:IAO_0000115>
+        <rdfs:label>reference body weight for cardiac output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the absolute temperature at which the reference mass-specific cardiac output is specified.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>reference temperature for cardiac output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the oxygen consumption rate per unit body weight specified at a reference body weight and reference temperature.</pbpko:IAO_0000115>
+        <rdfs:label>reference mass specific oxygen consumption rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00008"/>
+        <pbpko:IAO_0000115>A bodyweight that is the body weight at which the reference mass-specific oxygen consumption rate is specified.</pbpko:IAO_0000115>
+        <rdfs:label>reference body weight for oxygen consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the absolute temperature at which the reference mass-specific oxygen consumption rate is specified.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>reference temperature for oxygen consumption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08009 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the fraction of the oxygen in inspired water that is extracted across the respiratory exchange surface.</pbpko:IAO_0000115>
+        <rdfs:label>oxygen extraction efficiency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the fraction of the oxygen saturation concentration that is present in the exposure water.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>dissolved oxygen saturation fraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the rate at which reserve is mobilised relative to structural length in the Dynamic Energy Budget model.</pbpko:IAO_0000115>
+        <rdfs:label>energy conductance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless ratio describing the relative energy investment in growth compared with somatic maintenance in the Dynamic Energy Budget model.</pbpko:IAO_0000115>
+        <rdfs:label>energy investment ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the Dynamic Energy Budget rate coefficient describing somatic maintenance costs per unit structural biomass.</pbpko:IAO_0000115>
+        <rdfs:label>somatic maintenance rate coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the cumulative energy invested in maturity at metamorphosis in the growth submodel.</pbpko:IAO_0000115>
+        <rdfs:label>energy at state of maturity at metamorphosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08015 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08015">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the cumulative energy invested in maturity at birth in the growth submodel.</pbpko:IAO_0000115>
+        <rdfs:label>energy at state of maturity at birth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08016 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08016">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless coefficient relating structural length to measured physical length in the Dynamic Energy Budget growth model.</pbpko:IAO_0000115>
+        <rdfs:label>shape coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08017 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08017">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the coefficient a in the body weight-length relationship used to calculate body weight from length.</pbpko:IAO_0000115>
+        <rdfs:label>body weight length coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08018">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless exponent b in the body weight-length relationship used to calculate body weight from length.</pbpko:IAO_0000115>
+        <rdfs:label>body weight length exponent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08019 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08019">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the temperature used in the Arrhenius correction of growth, cardiac output and oxygen consumption.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>arrhenius temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the absolute reference temperature used for the temperature correction of the Dynamic Energy Budget growth process.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>reference temperature for DEB growth</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08021 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08021">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the dimensionless constant describing relative food availability, where 1 represents ad libitum feeding and 0 represents starvation.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>constant food level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the liver compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of liver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08023 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08023">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the brain compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of brain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08024 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08024">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the gonads compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of gonads</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08025 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08025">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the adipose tissue compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of adipose tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08026 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08026">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the skin compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of skin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08027">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the gastrointestinal tract compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of gastrointestinal tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the kidney compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of kidney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the richly perfused tissue compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of richly perfused tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the poorly perfused tissue compartment that is water, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative water content of poorly perfused tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08031 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08031">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the liver compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of liver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the brain compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of brain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the gonads compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of gonads</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08034 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08034">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the adipose tissue compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of adipose tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the skin compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of skin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08036 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08036">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the gastrointestinal tract compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of gastrointestinal tract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08037 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08037">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the kidney compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of kidney</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08038">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the richly perfused tissue compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of richly perfused tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the dimensionless fraction of the wet mass of the poorly perfused tissue compartment that is lipid, used in the tissue:blood partition-coefficient QSAR.</pbpko:IAO_0000115>
+        <rdfs:label>relative lipid content of poorly perfused tissue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00013"/>
+        <pbpko:IAO_0000115>A cardiac output rate that is the cardiac output per unit body weight after adjustment for water temperature and body weight.</pbpko:IAO_0000115>
+        <rdfs:label>mass specific cardiac output</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08041 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08041">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the oxygen consumption rate per unit body weight after adjustment for water temperature and body weight.</pbpko:IAO_0000115>
+        <rdfs:label>mass specific oxygen consumption rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08042 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08042">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the total mass of oxygen consumed by the organism per unit time.</pbpko:IAO_0000115>
+        <rdfs:label>oxygen consumption rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08043 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08043">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00649"/>
+        <pbpko:IAO_0000115>A parameter that is the dissolved oxygen concentration in the water entering the respiratory exchange surface.</pbpko:IAO_0000115>
+        <pbpko:IAO_0000232>Asserted under the parameter root; the ontology has no class for an environmental or experimental condition parameter. Re-parent when one exists.</pbpko:IAO_0000232>
+        <rdfs:label>afferent dissolved oxygen concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08044 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08044">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00006"/>
+        <pbpko:IAO_0000115>A physiological parameter that is the effective volume of water passing the perfused respiratory exchange surface per unit time.</pbpko:IAO_0000115>
+        <rdfs:label>effective respiratory volume</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PBPKO_08045 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PBPKO_08045">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PBPKO_00139"/>
+        <pbpko:IAO_0000115>A biochemical parameter that is the effective clearance governing exchange of the chemical between water and blood across the gills.</pbpko:IAO_0000115>
+        <rdfs:label>blood water exchange coefficient</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
